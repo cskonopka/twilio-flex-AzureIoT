@@ -21,7 +21,7 @@ npm build
 
 ## Workflow
 
-Flex -> Accept incoming SMS -> Twilio Studio HTTP POST -> Azure Function (Create Programmable Wireless Command in Node.js) -> Receive Command with Arduino MKR 1400 -> Blink LED
+*Flex -> Accept incoming SMS -> Twilio Studio HTTP POST -> Azure Function (Create Programmable Wireless Command in Node.js) -> Receive Command with Arduino MKR 1400 -> Blink on-board LED*
 
 ### Twilio Flex
 Flex agent receives a new SMS prompt and when a new chat starts an HTTP POST is routed in a Twilio Studio Flow.
@@ -49,7 +49,7 @@ module.exports = async function (context, req) {
 ```
 
 ### Arduino MKR 1400
-The Arduino MKR 1400 receives a Command created by the Azure Function, filters the data and then illuminates the onboard LED to notify the agent that an SMS conversation has started.
+The Arduino MKR 1400 receives a Command created by the Azure Function, filters the data and then illuminates the on-board LED to notify the agent that an SMS conversation has started.
 
 ```
 #include <MKRGSM.h>
