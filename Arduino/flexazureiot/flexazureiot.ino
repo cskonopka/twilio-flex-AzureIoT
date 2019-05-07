@@ -3,12 +3,6 @@
 GSM gsmAccess;
 GSM_SMS sms;
 
-int brightness = 0;    // how bright the LED is
-int fadeAmount = 5;    // how many points to fade the LED by
-int led = 13;           // the PWM pin the LED is attached to
-
-char senderNumber[20];
-
 void setup() {
   Serial.begin(9600);
   pinMode(LED_BUILTIN, OUTPUT);
